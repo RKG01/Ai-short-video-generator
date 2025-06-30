@@ -1,4 +1,3 @@
-Thanks for the detailed info! Based on your tech stack and AI pipeline (Gemini → Voice → Caption → Image → Merge), here’s a polished and complete `README.md` tailored to your **AI Short Video Generator** project.
 
 ---
 
