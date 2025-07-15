@@ -1,10 +1,17 @@
 import { AssemblyAI } from "assemblyai";
 import { NextResponse } from "next/server";
 
+
 export async function POST(req) {
   try {
     const { audioFileURL } = await req.json(); // ✅ key matches frontend
-
+      
+    if (!audioFileURL) {
+      return NextResponse.json(
+        { error: 'audioFileURL is required' },
+        { status: 400 }
+      );
+    }
     const client = new AssemblyAI({
       apiKey: process.env.CAPTION_API_KEY,
     });
